@@ -1,12 +1,3 @@
-/*
-Connection to the BTS7960 board:
-BTS7960 Pin 1 (RPWM) to Arduino pin 5(PWM)
-BTS7960 Pin 2 (LPWM) to Arduino pin 6(PWM)
-BTS7960 Pin 3 (R_EN), 4 (L_EN), 7 (VCC) to Arduino 5V pin
-BTS7960 Pin 8 (GND) to Arduino GND
-BTS7960 Pin 5 (R_IS) and 6 (L_IS) not connected
-*/
-
 #include <Servo.h>
 
 Servo m1;  // create servo object to control a servo
@@ -23,7 +14,7 @@ int sw1State = 0;
 int sw2State = 0;
 int btState = 0;
 int pos;        // variable to store the servo position
-int time = 15;  // time between each step
+int time = 0.018;  // time between each step
 
 void setup() {
   Serial.begin(9600);
